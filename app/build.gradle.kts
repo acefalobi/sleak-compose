@@ -34,7 +34,7 @@ android {
             applicationIdSuffix = ".debug"
             isDebuggable = true
 
-            resValue("string", "app_name", "uLesson Debug")
+            resValue("string", "app_name", "Sleak Debug")
         }
         getByName("release") {
             isShrinkResources = true
@@ -45,7 +45,7 @@ android {
                 "proguard-rules.pro"
             )
 
-            resValue("string", "app_name", "uLesson")
+            resValue("string", "app_name", "Sleak")
         }
     }
 
@@ -83,6 +83,7 @@ dependencies {
     implementation(project(ProjectDependencies.remote))
 
     implementation(DependencyInjectionDependencies.hilt)
+    implementation(DependencyInjectionDependencies.hiltComposeNavigation)
     kapt(DependencyInjectionDependencies.hiltCompiler)
 
     implementation(AndroidXDependencies.activityCompose)
@@ -108,6 +109,9 @@ dependencies {
     implementation(AsyncDependencies.coroutines)
     implementation(AsyncDependencies.coroutinesAndroid)
 
+    implementation(UtilityDependencies.accompanistInsets)
+    implementation(UtilityDependencies.accompanistInsetsUi)
+    implementation(UtilityDependencies.accompanistSwipeRefresh)
     implementation(UtilityDependencies.moshi)
     implementation(UtilityDependencies.timber)
 

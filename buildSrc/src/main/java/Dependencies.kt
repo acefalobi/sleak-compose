@@ -109,10 +109,12 @@ object DependencyInjectionDependencies {
 
     object Versions {
         const val hilt = "2.36"
+        const val hiltComposeNavigation = "1.0.0-alpha03"
     }
 
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt}"
     const val hiltCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+    const val hiltComposeNavigation = "androidx.hilt:hilt-navigation-compose:${Versions.hiltComposeNavigation}"
 }
 
 object PersistenceDependencies {
@@ -132,11 +134,15 @@ object PersistenceDependencies {
 object UtilityDependencies {
 
     object Versions {
+        const val accompanist = "0.16.1"
         const val moshi = "1.12.0"
         const val timber = "4.7.1"
         const val multidex = "2.0.0"
     }
 
+    const val accompanistInsets = "com.google.accompanist:accompanist-insets:${Versions.accompanist}"
+    const val accompanistInsetsUi = "com.google.accompanist:accompanist-insets:${Versions.accompanist}"
+    const val accompanistSwipeRefresh = "com.google.accompanist:accompanist-swiperefresh:${Versions.accompanist}"
     const val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
     const val moshiAdapters = "com.squareup.moshi:moshi-adapters:${Versions.moshi}"
     const val moshiKotlin = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"

@@ -4,11 +4,11 @@ import com.aceinteract.sleak.core.base.model.ISong
 
 data class Song(
     override val id: String,
-    override var trackNo: Int,
+    override var trackPosition: Int,
     override var title: String,
-    override var album: Map<String, String>?,
-    override var artists: List<Map<String, String>>,
-    override var owner: Map<String, String>,
+    override var album: Pair<String, String>?,
+    override var artists: Map<String, String>,
+    override var owner: Pair<String, String>,
     override var year: Int,
     override var duration: Long,
     override var trackURI: String,

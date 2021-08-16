@@ -12,7 +12,7 @@ interface ISong {
     /**
      * Track position on an album.
      */
-    var trackNo: Int
+    var trackPosition: Int
 
     /**
      * Title of the song.
@@ -21,22 +21,22 @@ interface ISong {
 
     /**
      * The album the song appeared on.
-     * Represented as a map of the id [Map.keys] to the album name [Map.values].
+     * Represented as a map of the id [Pair.first] to the album name [Pair.second].
      * Will be null if the song isn't on an album, i.e a single.
      */
-    var album: Map<String, String>?
+    var album: Pair<String, String>?
 
     /**
      * The list of artists who made the song.
      * Represented as a map of the id [Map.keys] to the artist name [Map.values].
      */
-    var artists: List<Map<String, String>>
+    var artists: Map<String, String>
 
     /**
      * The artist who owns the song.
-     * Represented as a map of the id [Map.keys] to the artist name [Map.values].
+     * Represented as a map of the id [Pair.first] to the artist name [Pair.second].
      */
-    var owner: Map<String, String>
+    var owner: Pair<String, String>
 
     /**
      * The year the song was released.
