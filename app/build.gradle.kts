@@ -93,6 +93,7 @@ dependencies {
     implementation(AndroidXDependencies.composeMaterialIcons)
     implementation(AndroidXDependencies.composePreview)
     implementation(AndroidXDependencies.composeTooling)
+    implementation(AndroidXDependencies.constraintLayoutCompose)
     implementation(AndroidXDependencies.lifecycleCommon)
     implementation(AndroidXDependencies.lifecycleRuntime)
     implementation(AndroidXDependencies.lifecycleViewModel)
@@ -111,6 +112,7 @@ dependencies {
 
     implementation(UtilityDependencies.accompanistInsets)
     implementation(UtilityDependencies.accompanistInsetsUi)
+    implementation(UtilityDependencies.accompanistPlaceholder)
     implementation(UtilityDependencies.accompanistSwipeRefresh)
     implementation(UtilityDependencies.moshi)
     implementation(UtilityDependencies.timber)

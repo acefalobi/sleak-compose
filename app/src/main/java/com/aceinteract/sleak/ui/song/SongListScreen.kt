@@ -4,12 +4,8 @@ import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.ScaffoldState
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.aceinteract.sleak.common.ui.UiState
@@ -29,19 +25,19 @@ fun SongListPreview() {
     }
 }
 
-@Composable
-fun SongListScreen(viewModel: SongListViewModel, scaffoldState: ScaffoldState) {
-    val uiState by viewModel.songsState.collectAsState()
-    SongList(uiState) {
-        viewModel.loadSongs()
-    }
-    if (uiState is UiState.Error) {
-        LaunchedEffect("error") {
-            scaffoldState.snackbarHostState.showSnackbar((uiState as UiState.Error<List<Song>>).error.localizedMessage
-                ?: "An error occurred")
-        }
-    }
-}
+//@Composable
+//fun SongListScreen(viewModel: SongListViewModel, scaffoldState: ScaffoldState) {
+//    val uiState by viewModel.songsState.collectAsState()
+//    SongList(uiState) {
+//        viewModel.loadSongs()
+//    }
+//    if (uiState is UiState.Error) {
+//        LaunchedEffect("error") {
+//            scaffoldState.snackbarHostState.showSnackbar((uiState as UiState.Error<List<Song>>).error.localizedMessage
+//                ?: "An error occurred")
+//        }
+//    }
+//}
 
 @Composable
 fun SongList(uiState: UiState<List<Song>>, onRefresh: () -> Unit) {
@@ -58,5 +54,5 @@ fun SongList(uiState: UiState<List<Song>>, onRefresh: () -> Unit) {
 
 @Composable
 fun SongItem(song: Song) {
-    Text("${song.title} by ${song.owner.second}")
+    Text("${song.name} by ${song.creator.second}")
 }

@@ -3,4 +3,10 @@
     <string name="discover">Discover</string>
     <string name="library">Library</string>
     <string name="profile">Profile</string>
+    <string name="album">Album</string>
+    <string name="song">Song</string>
+    <string name="playlist">Playlist</string>
+    <string name="see_all">See All</string>
+    <string name="artist">Artist</string>
+    <string name="error_generic">An unknown error has occurred</string>
 </resources>

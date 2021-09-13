@@ -5,14 +5,16 @@ import com.aceinteract.sleak.core.base.model.ISong
 data class Song(
     override val id: String,
     override var trackPosition: Int,
-    override var title: String,
+    override var name: String,
     override var album: Pair<String, String>?,
     override var artists: Map<String, String>,
-    override var owner: Pair<String, String>,
+    override var creator: Pair<String, String>,
     override var year: Int,
     override var duration: Long,
     override var trackURI: String,
-    override var coverUrl: String
+    override var mediaArtUrl: String,
+    override var description: String,
+    override val hexColor: String
 ) : ISong {
     /**
      * Converts duration in milliseconds to full text format.

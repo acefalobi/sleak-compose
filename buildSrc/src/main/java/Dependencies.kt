@@ -47,8 +47,9 @@ object AndroidXDependencies {
     object Versions {
         const val activityCompose = "1.3.1"
         const val appCompat = "1.3.1"
-        const val coreKtx = "1.6.0"
         const val compose = "1.0.1"
+        const val constraintLayoutCompose = "1.0.0-beta02"
+        const val coreKtx = "1.6.0"
         const val lifecycle = "2.3.1"
         const val transition = "1.2.0"
         const val navigation = "2.3.0-alpha05"
@@ -63,6 +64,7 @@ object AndroidXDependencies {
     const val composeMaterialIcons = "androidx.compose.material:material-icons-extended:${Versions.compose}"
     const val composePreview = "androidx.compose.ui:ui-tooling-preview:${Versions.compose}"
     const val composeTooling = "androidx.compose.ui:ui-tooling:${Versions.compose}"
+    const val constraintLayoutCompose = "androidx.constraintlayout:constraintlayout-compose:${Versions.constraintLayoutCompose}"
     const val lifecycleCommon = "androidx.lifecycle:lifecycle-common-java8:${Versions.lifecycle}"
     const val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"
     const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycle}"
@@ -78,13 +80,13 @@ object AndroidXDependencies {
 object ViewDependencies {
 
     object Versions {
-        const val coil = "1.1.1"
+        const val coil = "1.3.2"
         const val exoPlayer = "2.14.2"
         const val materialComponent = "1.4.0"
         const val shimmerLayout = "0.4.0"
     }
 
-    const val coil = "io.coil-kt:coil:${Versions.coil}"
+    const val coil = "io.coil-kt:coil-compose:${Versions.coil}"
     const val exoPlayer = "com.google.android.exoplayer:exoplayer:${Versions.exoPlayer}"
     const val materialComponent =
         "com.google.android.material:material:${Versions.materialComponent}"
@@ -141,7 +143,8 @@ object UtilityDependencies {
     }
 
     const val accompanistInsets = "com.google.accompanist:accompanist-insets:${Versions.accompanist}"
-    const val accompanistInsetsUi = "com.google.accompanist:accompanist-insets:${Versions.accompanist}"
+    const val accompanistInsetsUi = "com.google.accompanist:accompanist-insets-ui:${Versions.accompanist}"
+    const val accompanistPlaceholder = "com.google.accompanist:accompanist-placeholder-material:${Versions.accompanist}"
     const val accompanistSwipeRefresh = "com.google.accompanist:accompanist-swiperefresh:${Versions.accompanist}"
     const val moshi = "com.squareup.moshi:moshi:${Versions.moshi}"
     const val moshiAdapters = "com.squareup.moshi:moshi-adapters:${Versions.moshi}"
@@ -178,7 +181,7 @@ object TestingDependencies {
 object ClasspathDependencies {
 
     object Versions {
-        const val gradle = "7.0.0"
+        const val gradle = "7.0.2"
         const val hilt = "2.38.1"
         const val navigation = "2.3.5"
         const val spotless = "5.14.0"
